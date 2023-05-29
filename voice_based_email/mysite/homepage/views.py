@@ -24,9 +24,9 @@ addr = ""
 item =""
 subject = ""
 body = ""
-s = smtplib.SMTP('smtp.gmail.com', 587)
+s = smtplib.SMTP('smtp.office365.com', 587)
 s.starttls()
-imap_url = 'imap.gmail.com'
+imap_url = 'outlook.office365.com'
 conn = imaplib.IMAP4_SSL(imap_url)
 attachment_dir = 'C:/Users/Chacko/Desktop/'
 
@@ -141,7 +141,7 @@ def login_view(request):
         passwrd = convert_special_char(passwrd)
         print(passwrd)
 
-        imap_url = 'imap.gmail.com'
+        imap_url = 'outlook.office365.com'
         #passwrd = ''
         #addr = ''
         conn = imaplib.IMAP4_SSL(imap_url)
@@ -593,7 +593,7 @@ def search_specific_mail(folder,key,value,foldername):
 def inbox_view(request):
     global i, addr, passwrd, conn
     if request.method == 'POST':
-        imap_url = 'imap.gmail.com'
+        imap_url = 'outlook.office365.com'
         conn = imaplib.IMAP4_SSL(imap_url)
         conn.login(addr, passwrd)
         conn.select('"INBOX"')
@@ -610,7 +610,7 @@ def inbox_view(request):
             act = speechtotext(5)
             act = act.lower()
             print(act)
-            if act == 'unread':
+            if act == 'unread' or 'hundred' or 'android':
                 flag = False
                 if no!=0:
                     read_mails(unread_list,'inbox')
@@ -672,10 +672,10 @@ def inbox_view(request):
 def sent_view(request):
     global i, addr, passwrd, conn
     if request.method == 'POST':
-        imap_url = 'imap.gmail.com'
+        imap_url = 'outlook.office365.com'
         conn = imaplib.IMAP4_SSL(imap_url)
         conn.login(addr, passwrd)
-        conn.select('"[Gmail]/Sent Mail"')
+        conn.select('"[Outlook]/Sent Mail"')
         result1, data1 = conn.search(None, "ALL")
         mail_list = data1[0].split()
         text = "You have reached your sent mails folder. You have " + str(len(mail_list)) + " mails in your sent mails folder. To search a specific email say search. To go back to the menu page say back. To logout say logout."
@@ -741,7 +741,7 @@ def sent_view(request):
 def trash_view(request):
     global i, addr, passwrd, conn
     if request.method == 'POST':
-        imap_url = 'imap.gmail.com'
+        imap_url = 'outlook.office365.com'
         conn = imaplib.IMAP4_SSL(imap_url)
         conn.login(addr, passwrd)
         conn.select('"[Gmail]/Trash"')
