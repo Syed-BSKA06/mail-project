@@ -1365,7 +1365,7 @@ a.text-warning:focus {
   color: #66512c;
 }
 .text-danger {
-  color: #a94442;
+  color: #680f0e;
 }
 a.text-danger:hover,
 a.text-danger:focus {
@@ -1536,7 +1536,7 @@ samp {
 code {
   padding: 2px 4px;
   font-size: 90%;
-  color: #c7254e;
+  color: #5c00f1;
   background-color: #f9f2f4;
   border-radius: 4px;
 }
@@ -3395,7 +3395,7 @@ fieldset[disabled] .btn-danger.focus {
   border-color: #d43f3a;
 }
 .btn-danger .badge {
-  color: #d9534f;
+  color: #4f1cfa;
   background-color: #fff;
 }
 .btn-link {
@@ -4900,14 +4900,14 @@ a.label:focus {
 }
 .label-warning[href]:hover,
 .label-warning[href]:focus {
-  background-color: #ec971f;
+  background-color: #995d08;
 }
 .label-danger {
-  background-color: #d9534f;
+  background-color: #d7d70581;
 }
 .label-danger[href]:hover,
 .label-danger[href]:focus {
-  background-color: #c9302c;
+  background-color: #041e90;
 }
 .badge {
   display: inline-block;
@@ -5695,7 +5695,7 @@ button.list-group-item-danger.active:focus {
 }
 .panel-default > .panel-heading .badge {
   color: #f5f5f5;
-  background-color: #333;
+  background-color: #245269;
 }
 .panel-default > .panel-footer + .panel-collapse > .panel-body {
   border-bottom-color: #ddd;

@@ -1,4 +1,3 @@
-
 from django.shortcuts import render, redirect
 from . import forms
 from .models import Details
@@ -88,13 +87,11 @@ def convert_special_char(text):
                     temp=temp.replace('dash','-')
     return temp
 
-
-
 def login_view(request):
     global i, addr, passwrd 
 
     if request.method == 'POST':
-        text1 = "Welcome to our Voice Based Email. Login with your email account in order to continue. "
+        text1 = "Welcome to our VOICE BASED ELECTRONIC MAIL FOR VISUALLY CHALLENGED. Login with your email account in order to continue. "
         texttospeech(text1, file + i)
         i = i + str(1)
 
